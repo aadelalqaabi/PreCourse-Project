@@ -76,13 +76,21 @@ function characterCount(string, c) {
 function largestIncrement(numbers) {
   // Your code here
   let subNum = [];
-
-  for (let i = 0; i <= numbers.length; i++) {
+  let final = 0;
+  for (let i = 0; i < numbers.length - 1; i++) {
     subNum.push(numbers[i + 1] - numbers[i]);
   }
-  for (let i = 0; i <= subNum.length; i++) {}
+
+  for (let i = 0; i < subNum.length - 1; i++) {
+    if (subNum[i] <= subNum[i + 1]) {
+      subNum.splice(i);
+    }
+  }
+  subNum.forEach((element) => (final = element));
+
+  return final;
 }
-// console.log(largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]));
+//console.log(largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]));
 
 /**
  * afterX(numbers, x):
@@ -97,8 +105,14 @@ function largestIncrement(numbers) {
  */
 function afterX(numbers, x) {
   // Your code here
+  let final = [];
+
+  let newArray = numbers.filter((element) => element > x);
+
+  newArray.forEach((element) => final.push(element));
+  return final;
 }
-// console.log(afterX([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
+console.log(afterX([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
 
 /**
  * abbreviate(firstName, lastName):
