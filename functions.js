@@ -55,7 +55,7 @@ function characterCount(string, c) {
 
   return nums;
 }
-console.log(characterCount("Character Count is clever", "c"));
+//console.log(characterCount("Character Count is clever", "c"));
 
 /**
  * largestIncrement(numbers):
@@ -75,6 +75,12 @@ console.log(characterCount("Character Count is clever", "c"));
  */
 function largestIncrement(numbers) {
   // Your code here
+  let subNum = [];
+
+  for (let i = 0; i <= numbers.length; i++) {
+    subNum.push(numbers[i + 1] - numbers[i]);
+  }
+  for (let i = 0; i <= subNum.length; i++) {}
 }
 // console.log(largestIncrement([11, 35, 52, 14, 56, 601, 777, 888, 999]));
 
