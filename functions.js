@@ -112,7 +112,7 @@ function afterX(numbers, x) {
   newArray.forEach((element) => final.push(element));
   return final;
 }
-console.log(afterX([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
+//console.log(afterX([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
 
 /**
  * abbreviate(firstName, lastName):
@@ -127,8 +127,19 @@ console.log(afterX([1, 2, 3, 4, 5, 6, 7, 8, 9], 3));
  */
 function abbreviate(firstName, lastName) {
   // Your code here
+
+  const newArray = firstName.split("");
+  const firstChar = newArray[0];
+  const newfirst = firstChar.toUpperCase();
+  newArray[0] = newfirst;
+
+  const newsecondArray = firstName.split("");
+  const firstCharlast = newsecondArray[0];
+  const newlast = firstCharlast.toUpperCase();
+  newsecondArray[0] = newlast;
+  console.log(firstName + " " + lastName);
 }
-// console.log(abbreviate("miss", "Stephane"));
+console.log(abbreviate("miss", "Stephane"));
 
 /**
  * isUpperCase(string):
