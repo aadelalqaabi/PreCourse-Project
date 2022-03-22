@@ -20,8 +20,13 @@
  */
 function sumOdds(numbers) {
   // Your code here
+  let odds = 0;
+  let newArray = numbers.filter((element) => element % 2 !== 0);
+
+  newArray.forEach((element) => (odds += element));
+  return odds;
 }
-// console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
+//console.log(sumOdds([3, 7, 8, 15, 2, 1, 13]));
 
 /**
  * characterCount(string, c):
@@ -38,8 +43,13 @@ function sumOdds(numbers) {
  */
 function characterCount(string, c) {
   // Your code here
+  const newArray = string.split("");
+
+  const filteredElement = newArray.filter((element) => element === c);
+
+  return filteredElement;
 }
-// console.log(characterCount("Character Count is clever", "c"));
+console.log(characterCount("Character Count is clever", "c"));
 
 /**
  * largestIncrement(numbers):
