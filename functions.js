@@ -43,11 +43,17 @@ function sumOdds(numbers) {
  */
 function characterCount(string, c) {
   // Your code here
-  const newArray = string.split("");
+  const newString = string.toLowerCase();
+  let nums = 0;
+  const newArray = newString.split("");
+  const filteredElement = newArray.filter(
+    (element) => element === c.toLowerCase()
+  );
+  filteredElement.forEach((element) => {
+    nums++;
+  });
 
-  const filteredElement = newArray.filter((element) => element === c);
-
-  return filteredElement;
+  return nums;
 }
 console.log(characterCount("Character Count is clever", "c"));
 
